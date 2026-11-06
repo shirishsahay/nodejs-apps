@@ -90,10 +90,10 @@ app.get("/:urlId", async (req, res) => {
     }
 
     // Redirect user to original web page
-    // return res.redirect(url.originalUrl);
+    return res.redirect(url.originalUrl);
 
     // return the url data as JSON instead of redirecting
-    return res.status(200).json(url);
+    // return res.status(200).json(url);
   } catch (error) {
     console.error("Error redirecting to original URL:", error);
     return res.status(500).json({ error: "Internal server error" });
